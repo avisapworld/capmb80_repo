@@ -19,7 +19,7 @@ service ProductMgmtService {
                 when stock < 10
                      then 2
                 else 3
-            end as statusCriticality : Integer ,
+            end as statusCriticality : Integer,
         }
 
 }

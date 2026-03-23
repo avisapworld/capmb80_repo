@@ -4,7 +4,7 @@ using { cuid,managed } from '@sap/cds/common';
 entity Products: cuid {
 
     name: String(30);
-    description : String(500);
+    description : String(50);
     price: Decimal(9,2);
     discount: Integer;
     stock: Integer;
