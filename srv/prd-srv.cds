@@ -5,21 +5,21 @@ service ProductMgmtService {
     entity Products  as projection on b80db.Products
      {
             *,
-            case
-                when stock = 0
-                     then 'Out of Stock'
-                when stock < 10
-                     then 'Low Stock'
-                else 'Available'
+           case
+              when stock = 0
+                 then 'Out of Stock'
+            when stock < 10
+               then 'Low Stock'
+            else 'Available'
             end as status: String ,
 
-            case
-                when stock = 0
-                     then 1
-                when stock < 10
-                     then 2
-                else 3
-            end as statusCriticality : Integer,
+           case
+               when stock = 0
+                  then '1'
+             when stock < 10
+                 then '2'
+             else '3'
+            end as statusCriticality : String,
         }
 
 }
