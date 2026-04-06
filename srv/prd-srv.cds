@@ -19,7 +19,7 @@ service ProductMgmtService {
              when stock < 10
                  then '2'
              else '3'
-            end as statusCriticality : String,
+            end as statusCriticality : String, //Changed to String from integer
         }
 
 }
